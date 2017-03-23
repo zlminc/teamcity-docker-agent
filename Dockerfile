@@ -8,6 +8,7 @@ LABEL dockerImage.teamcity.version="latest" \
 RUN apt-get update && \
     apt-get install -y software-properties-common && add-apt-repository ppa:openjdk-r/ppa && apt-get update && \
     apt-get install -y git mercurial openjdk-8-jdk apt-transport-https ca-certificates && \
+    apt-get install -y mysql-client && \
     apt-get install -y python python-pip && \
     apt-get install -y nodejs npm && \
     ln -s /usr/bin/nodejs /usr/bin/node && \
